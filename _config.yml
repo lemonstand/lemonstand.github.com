@@ -1,5 +1,6 @@
 # Site settings
 title: LemonStand Community Projects
+taglne: We &hearts; our community
 email: community@lemonstand.com
 description: > # 
   These are some of our community projects, including themes, libraries,
@@ -9,6 +10,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: lemonstand
 github_username:  lemonstand
 
+include: [ "assets" ]
 # Build settings
 markdown: kramdown
 defaults:
@@ -17,3 +19,18 @@ defaults:
       path: "" # empty string for all files
     values:
       layout: "default"
+
+kramdown:
+  auto_ids: true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      inline
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css:               style
