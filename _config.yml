@@ -2,16 +2,21 @@
 title: LemonStand Community Projects
 taglne: We &hearts; our community
 email: community@lemonstand.com
-description: > # 
-  These are some of our community projects, including themes, libraries,
-  and design resources. Looking to build a beautiful, flexible online store?
-  Try <a href="http://lemonstand.com">LemonStand</a> for free.
-baseurl: "" # the subpath of your site, e.g. /blog/
+description: >
+    These are some of our community projects, including themes, libraries, and
+    design resources. Looking to build a beautiful, flexible online store? Try
+    <a href='http://lemonstand.com'>LemonStand</a> for free.
+baseurl: ""
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: lemonstand
 github_username:  lemonstand
 
 include: [ "assets" ]
+
+collections:
+    guidelines:
+        output: true
+
 # Build settings
 markdown: kramdown
 defaults:

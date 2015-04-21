@@ -1,3 +1,7 @@
+$lemonBlue: #1485ca;
+
+$textDark: #343433;
+
 header {
 	a.site-title {
 		img {
@@ -10,4 +14,45 @@ header {
 			padding-left: 1em;
 		}
 	}
+}
+
+.page-content {
+
+	nav {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		margin: 0 0 1em 0;
+
+		li {
+			list-style-type: none;
+			display: inline;
+			margin: .25em 1em;
+
+			&.current {
+				border-bottom: 4px solid $lemonBlue;
+			}
+
+			a {
+				text-transform: uppercase !important;
+				font-size: 10pt;
+			}
+		}
+	}
+}
+
+a {
+	color: $lemonBlue !important;
+}
+
+.post {
+	margin-top: 2em;
+	
+	h1, h2, h3, h4, h5 {
+		color: $textDark;
+		font-weight: bold;
+	}
+	h1.post-title {
+		font-size: 24pt;
+	}	
 }
