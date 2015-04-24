@@ -4,14 +4,10 @@ $textDark: #343433;
 
 header {
 	a.site-title {
+		text-decoration: none;
+
 		img {
 			width: 238px;
-		}
-		em {
-			font-size: 12pt;
-			font-style: normal;
-			letter-spacing: 1px;
-			padding-left: 1em;
 		}
 	}
 }
@@ -43,6 +39,7 @@ header {
 
 a {
 	color: $lemonBlue !important;
+	font-weight: bold;
 }
 
 .post {
@@ -55,4 +52,65 @@ a {
 	h1.post-title {
 		font-size: 24pt;
 	}	
+}
+
+nav.menu {
+	clear: both;
+
+	a {
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 10.5pt;
+		margin-right: 1em;
+	}
+}
+
+$previewSize: 60px;
+
+.palette {
+	position: relative;
+	padding-left: 0; margin-left: 0;
+
+	li {
+		position: relative;
+		height: $previewSize + 10px;
+		list-style-type: none;
+		width: 4 * $previewSize;
+		padding-left: 0; margin-left: 0;
+
+		span.preview {
+			position: absolute; left: 0; top: 0;
+			display: block;
+			width: $previewSize; height: $previewSize;
+			line-height: $previewSize * 1.75;
+			color: #fff;
+			font-family: monospace;
+			font-size: 11px;
+			overflow: hidden;
+
+			> span {
+				position: absolute; right: -.55 * $previewSize; top: -.55 * $previewSize;
+				display: block;
+				width: $previewSize; height: $previewSize;
+				-webkit-transform: rotate(45deg);
+			    -moz-transform: rotate(45deg);
+			    -o-transform: rotate(45deg);
+			    -ms-transform: rotate(45deg);
+				 transform: rotate(45deg);
+			}
+		}
+		&.light {
+			span.preview {
+				color: #222;
+			}
+		}
+
+		h4 {
+			font-family: Montserrat;
+			padding-left: $previewSize + 10px;
+			line-height: $previewSize * 1.75;
+			font-size: 10pt;
+			text-transform: uppercase;
+		}
+	}
 }
