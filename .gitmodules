@@ -1,0 +1,3 @@
+[submodule "prototypes"]
+	path = prototypes
+	url = https://github.com/lemonstand/ls-ux-prototypes.git
