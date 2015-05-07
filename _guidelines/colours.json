@@ -3,17 +3,29 @@
         {
             "palette": [
                 {
-                    "alt": "",
-                    "colour": "#3176B6",
+                    "alt": "#0084cd",
+                    "colour": "#006fb9",
                     "name": "LS Blue",
                     "tags": []
                 },
                 {
                     "alt": "",
-                    "colour": "#E7BD3C",
+                    "colour": "#3176B6",
+                    "name": "LS Blue wrong",
+                    "tags": []
+                },                
+                {
+                    "alt": "",
+                    "colour": "#f0c332",
                     "name": "LS Lemon",
                     "tags": []
-                }
+                },
+                {
+                    "alt": "",
+                    "colour": "#E7BD3C",
+                    "name": "LS Lemon wrong",
+                    "tags": []
+                }          
             ],
             "title": "Brand Colours"
 
