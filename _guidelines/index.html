@@ -6,7 +6,7 @@ layout: default
 
   <h1 class="page-heading">Guidelines</h1>
 
-  <div id="colors"></div>
+  <div id="colors" style="display: none;"></div>
 
 </div>
 
@@ -70,7 +70,7 @@ $( document ).ready(function() {
       }
 
         
-      $('#colors').html(html);
+      $('#colors').html(html).fadeIn(250);
     }
 
   });
