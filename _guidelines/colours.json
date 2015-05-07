@@ -1,0 +1,121 @@
+{
+    "colours": [
+        {
+            "palette": [
+                {
+                    "alt": "",
+                    "colour": "#3176B6",
+                    "name": "LS Blue",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#E7BD3C",
+                    "name": "LS Lemon",
+                    "tags": []
+                }
+            ],
+            "title": "Brand Colours"
+
+        },
+        {
+            "palette": [
+                {
+                    "alt": "",
+                    "colour": "#F0F0F0",
+                    "name": "BG Lightest",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#DCDCDC",
+                    "name": "BG Light",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#C8C8C8",
+                    "name": "BG Mid",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#969696",
+                    "name": "BG Dark",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#323232",
+                    "name": "BG Darkest",
+                    "tags": []
+                }
+            ],
+            "title": "Borders and backgrounds"
+        },
+        {
+            "palette": [
+                {
+                    "alt": " #8fd090",
+                    "colour": "#55a537",
+                    "name": "Roger that",
+                    "tags": []
+                },
+                {
+                    "alt": " #0087c8",
+                    "colour": "#0073b4",
+                    "name": "Okie dokie",
+                    "tags": []
+                },
+                {
+                    "alt": " #F6A449",
+                    "colour": "#FD9827",
+                    "name": "Danger, Danger",
+                    "tags": []
+                },
+                {
+                    "alt": " #d74646",
+                    "colour": "#c33232",
+                    "name": "Failure",
+                    "tags": []
+                },
+                {
+                    "alt": " #efc232",
+                    "colour": "#ebb42d",
+                    "name": "Do it / Warning",
+                    "tags": []
+                }
+            ],
+            "title": "Message hints"
+        },
+        {
+            "palette": [
+                {
+                    "alt": "",
+                    "colour": "#323232",
+                    "name": "Normal text",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#DCDCDC",
+                    "name": "Light text",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#0073b4",
+                    "name": "Alt text",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#0087c8",
+                    "name": "Alt light text",
+                    "tags": []
+                }
+            ],
+            "title": "Text colours"
+        }
+    ]
+}
