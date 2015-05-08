@@ -2,6 +2,11 @@ $lemonBlue: #1485ca;
 
 $textDark: #343433;
 
+h1, h2, h3, h4, h5 {
+	font-family: "proxima-nova";
+}
+
+
 header {
 	a.site-title {
 		text-decoration: none;
@@ -87,6 +92,18 @@ nav.menu {
 
 		}
 	}
+}
+
+div.examples {
+	div.type-examples {
+		width: 45%;
+		float: left;
+		border: 1px solid #444;
+		height: 350px;
+
+		margin: 2%;
+	}
+	
 }
 
 $previewSize: 150px;
