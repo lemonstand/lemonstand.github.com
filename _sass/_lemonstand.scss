@@ -65,6 +65,30 @@ nav.menu {
 	}
 }
 
+nav.menu {
+	ul {
+		margin: 0 0 0 0; padding: 0;
+
+		li {
+			list-style-type: none;
+			margin: .5em; padding: .5em;
+		}
+	}
+	ul.main-menu {
+		li {
+			float: left;
+
+			ul.sub-menu {
+
+				li {
+
+				}
+			}
+
+		}
+	}
+}
+
 $previewSize: 150px;
 
 div.guide-category {
