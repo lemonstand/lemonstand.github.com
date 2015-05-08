@@ -1,80 +1,57 @@
 ---
-layout: default
+layout: guidelines
 ---
 
-<div class="guidelines">
+<div class="guidelines" ng-app="guidelines">
 
   <h1 class="page-heading">Guidelines</h1>
 
-  <div id="colors" style="display: none;"></div>
+  <div ng-controller="colorsCtrl" id="colors">
+
+    <div class="guide-category" ng-repeat="category in categories">
+      <h3>[[category.title]]</h3>
+      <ul class="palette">
+        <li ng-repeat="entry in category.palette" class="">
+          <span class="preview" style="background-color: [[entry.colour]]">
+            [[entry.colour]]
+            <span class="alt" style="background-color: [[entry.alt]]">[[entry.alt]]</span>
+          </span>
+          <h4>[[entry.name]]</h4>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 
 </div>
 
 
 <script>
 
-$( document ).ready(function() {
+var
+  app = angular.module(
+    'guidelines',
+    [],
+    function($interpolateProvider) {
+      // Parse using [[]] instead of {{}} (so this plays nice with Jekyll
+      $interpolateProvider.startSymbol('[[');
+      $interpolateProvider.endSymbol(']]');
+    }),
+  coloursCtrl = app.controller("colorsCtrl",
+      function($scope, $http) {
 
+        $http({
+          url: "colours.json",
+          method: "GET",
+          }).success(function(d, s, h, c) {
 
-  /* TODO: this needs to use 'stach or similar instead of += */
+            $scope.categories = d.colours;
 
-  $.ajax({
-    type: "GET",
-    url: "colours.json",
-    error: function(xhr, status, error) {
-      console.log("Failed to load colours", status, error, xhr);
-    },
-    success: function(d) {
-      var
-        html = '';
+            console.log(d);
+          }).error(function(d, s, h, c) {
+            $scope.status = s;
+         });
 
-      for (var category in d.colours) {
-        var
-          cat = d.colours[category], 
-          title = cat.title, 
-          className = title.toLowerCase().replace(' ', '-');
+      });
 
-          html += '<div class="guide-category">\n';
-          html += '<h3>' + title + '</h3>\n<ul class="palette ' + 
-            className + '">';
-
-          for (var colour in cat.palette) {
-            var
-              item = cat.palette[colour],
-              mainColour = item.colour,
-              altColour = item.alt,
-              name = item.name,
-              tags = item.tags.join(' ');
-
-            html += '\n<li class="' + tags + '">\n';
-              html += '<span class="preview" style="background-color: ' + 
-                    mainColour +
-                    '">&nbsp;' + mainColour;
-
-              if (altColour) {
-                html += '<span class="alt" style="background-color: ' + 
-                      altColour + 
-                      '">&nbsp;' + altColour + '</span>\n';
-              }
-
-              html +=                     
-                    '</span>\n';
-
-              html += '<h4>' + name + '</h4>\n';
-
-            html += '\n</li>\n';
-
-          }
-
-        html += '\n</ul>\n</div>\n';  
-      }
-
-        
-      $('#colors').html(html).fadeIn(250);
-    }
-
-  });
-
-
-});
 </script>

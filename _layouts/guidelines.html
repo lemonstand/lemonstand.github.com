@@ -1,21 +1,20 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<nav>
-{% for nav in site.guidelines %}
-	<li {% if page.url == nav.url %}class="current"{% endif %}><a href="{{ nav.url }}">{{ nav.title }}</a></li>
-{% endfor %}
-</nav>
+  {% include head.html %}
 
-<div class="post guidelines">
+  <body>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+    {% include header.html %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
-</div>
+    {% include footer.html %}
+
+  </body>
+
+</html>
