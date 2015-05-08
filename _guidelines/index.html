@@ -6,22 +6,16 @@ layout: guidelines
 
   <h1 class="page-heading">Guidelines</h1>
 
-  <div ng-controller="colorsCtrl" id="colors">
+  <div ng-include="'dress-template.html'"></div>
 
-    <div class="guide-category" ng-repeat="category in categories">
-      <h3>[[category.title]]</h3>
-      <ul class="palette">
-        <li ng-repeat="entry in category.palette" class="">
-          <span class="preview" style="background-color: [[entry.colour]]">
-            [[entry.colour]]
-            <span class="alt" style="background-color: [[entry.alt]]">[[entry.alt]]</span>
-          </span>
-          <h4>[[entry.name]]</h4>
-        </li>
-      </ul>
-    </div>
-
+  <div ng-controller="colorsCtrl" ng-include="'colours-template.html'">
   </div>
+
+  <div ng-include="'type-template.html'"></div>
+
+  <div ng-include="'widgets-template.html'"></div>
+
+  <div ng-include="'metaphors-template.html'"></div>
 
 </div>
 
@@ -33,10 +27,17 @@ var
     'guidelines',
     [],
     function($interpolateProvider) {
-      // Parse using [[]] instead of {{}} (so this plays nice with Jekyll
+
+      /* NOTE: We need to change the Angular template braces as this is rendered via Jekyll
+
+          * Using [[]] instead of {{}}
+      */
+
       $interpolateProvider.startSymbol('[[');
       $interpolateProvider.endSymbol(']]');
     }),
+
+  /* Set up the colour display */
   coloursCtrl = app.controller("colorsCtrl",
       function($scope, $http) {
 

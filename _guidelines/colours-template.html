@@ -1,0 +1,14 @@
+<h2><a id="colours"></a> Colour palettes</h2>
+
+<div class="guide-category" ng-repeat="category in categories">
+  <h3>[[category.title]]</h3>
+  <ul class="palette">
+    <li ng-repeat="entry in category.palette" class="">
+      <span class="preview" style="background-color: [[entry.colour]]">
+        [[entry.colour]]
+        <span class="alt" style="background-color: [[entry.alt]]">[[entry.alt]]</span>
+      </span>
+      <h4>[[entry.name]]</h4>
+    </li>
+  </ul>
+</div>
