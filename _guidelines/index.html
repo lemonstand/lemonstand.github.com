@@ -39,18 +39,18 @@ var
     }),
 
   /* Set up the colour display */
-  coloursCtrl = app.controller("colorsCtrl",
+  coloursCtrl = app.controller('colorsCtrl',
       function($scope, $http) {
 
         $http({
-          url: "colours.json",
-          method: "GET",
+          url: 'colours.json',
+          method: 'GET',
           }).success(function(d, s, h, c) {
 
             $scope.categories = d.colours;
 
-            console.log(d);
           }).error(function(d, s, h, c) {
+            console.log('Failed to load colours JSON');
             $scope.status = s;
          });
 
