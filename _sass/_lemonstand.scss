@@ -91,6 +91,12 @@ nav.menu {
 
 $previewSize: 150px;
 
+div.guidelines {
+	> div {
+		clear: both;
+	}
+}
+
 div.guide-category {
 	clear: both;
 
