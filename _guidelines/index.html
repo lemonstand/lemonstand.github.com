@@ -28,7 +28,6 @@ layout: guidelines
 
 
 <script>
-
 var
   app = angular.module(
     'guidelines',
@@ -46,20 +45,24 @@ var
 
   /* Set up the colour display */
   coloursCtrl = app.controller('colorsCtrl',
-      function($scope, $http) {
+    function($scope, $http) {
 
-        $http({
-          url: 'colours.json',
-          method: 'GET',
-          }).success(function(d, s, h, c) {
+      $http({
+        url: 'colours.json',
+        method: 'GET',
+        }).success(function(d, s, h, c) {
 
-            $scope.categories = d.colours;
+          $scope.categories = d.colours;
 
-          }).error(function(d, s, h, c) {
-            console.log('Failed to load colours JSON');
-            $scope.status = s;
-         });
+        }).error(function(d, s, h, c) {
+          console.log('Failed to load colours JSON');
+          $scope.status = s;
+       });
 
-      });
+    }),
+
+  typeThemeSwitcher = app.controller('typeThemeSwitcher', 
+    function($scope, $http) {
+    });
 
 </script>
