@@ -2,6 +2,53 @@ $lemonBlue: #1485ca;
 
 $textDark: #343433;
 
+$okBlue: #0073b4;
+$okBlueAlt: #0087c8;
+
+$bgMid: #DCDCDC;
+
+h1, h2, h3, h4, h5 {
+	font-family: "proxima-nova";
+	line-height: 100%;
+	margin: 1.5em 0 .25em;
+}
+h3, h5 {
+	text-transform: uppercase;
+}
+h4, h5 {
+	font-weight: bold;
+}
+h1.banner {
+	font-size: 3em;
+	margin-top: 0;
+}
+
+a.button {
+	font-family: Montserrat, "Helvetica Neu", Helvetica;
+	font-size: 1em;
+	text-transform: uppercase;
+
+	text-decoration: none;
+	background-color: $okBlue;
+	color: white !important;
+
+	padding: .75em 1em;
+
+	border-radius: .25em;
+
+	transition: background-color  .25s ease-in-out;
+
+	&:hover {
+		background-color: $okBlueAlt;
+	}
+	&:active {
+		background-color: $okBlue;
+	}
+	&:disabled {
+		background-color: $bgMid;
+	}
+}
+
 header {
 	a.site-title {
 		text-decoration: none;
@@ -87,6 +134,14 @@ nav.menu {
 
 		}
 	}
+}
+
+div.examples {
+	div.type-examples {
+		border: 1px solid #ddd;
+		padding: .5em 1em;
+		overflow: hidden;
+	}	
 }
 
 $previewSize: 150px;
