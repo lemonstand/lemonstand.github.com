@@ -63,6 +63,42 @@ var
 
   typeThemeSwitcher = app.controller('typeThemeSwitcher', 
     function($scope, $http) {
+
+      $scope.dressStyles = [
+        {
+          'id': 'ls-formal',
+          'name': 'Formal',
+          'isSelected': 0
+        },
+        {    
+          'id': 'ls-industrial',
+          'name': 'Industrial',
+          'isSelected': 0
+        },  
+        {
+          'id': 'ls-hipster',
+          'name': 'Hipster',
+          'isSelected': 0
+        },
+        {
+          'id': 'ls-party',
+          'name': 'Party',
+          'isSelected': 0
+        }  
+      ];     
+
+      $scope.currentSelection  = $scope.dressStyles[0];
+      $scope.currentSelection.isSelected = 1;
+
+      $scope.switchTo = function(idx) {
+        
+        $scope.currentSelection.isSelected = 0;
+        $scope.currentSelection = $scope.dressStyles[idx];
+        $scope.currentSelection.isSelected = 1;
+        $scope.dressType = event.target.id;
+        
+      };
+
     });
 
 </script>
