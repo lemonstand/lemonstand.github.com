@@ -1,3 +1,8 @@
+/* TODO 
+
+	- move colours to separate sheet (auto-gen)
+*/
+
 $lemonBlue: #1485ca;
 
 $textDark: #343433;
@@ -6,6 +11,8 @@ $okBlue: #0073b4;
 $okBlueAlt: #0087c8;
 
 $bgMid: #DCDCDC;
+
+
 
 h1, h2, h3, h4, h5 {
 	font-family: "proxima-nova";
@@ -22,31 +29,15 @@ h1.banner {
 	font-size: 3em;
 	margin-top: 0;
 }
+h2.banner {
+	font-size: 2em;
+	margin-top: 0;
+}
 
-a.button {
+a.btn {
 	font-family: Montserrat, "Helvetica Neu", Helvetica;
-	font-size: 1em;
 	text-transform: uppercase;
-
-	text-decoration: none;
-	background-color: $okBlue;
-	color: white !important;
-
-	padding: .75em 1em;
-
-	border-radius: .25em;
-
 	transition: background-color  .25s ease-in-out;
-
-	&:hover {
-		background-color: $okBlueAlt;
-	}
-	&:active {
-		background-color: $okBlue;
-	}
-	&:disabled {
-		background-color: $bgMid;
-	}
 }
 
 header {
