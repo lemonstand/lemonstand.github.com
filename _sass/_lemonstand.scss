@@ -26,7 +26,7 @@ h4, h5 {
 	font-weight: bold;
 }
 h1.banner {
-	font-size: 3em;
+	font-size: 4em;
 	margin-top: 0;
 }
 h2.banner {
@@ -38,6 +38,8 @@ a.btn {
 	font-family: Montserrat, "Helvetica Neu", Helvetica;
 	text-transform: uppercase;
 	transition: background-color  .25s ease-in-out;
+	font-size: .8em;
+	color: inherit;
 }
 
 header {
@@ -127,11 +129,13 @@ nav.menu {
 	}
 }
 
+
 div.examples {
 	div.type-examples {
 		border: 1px solid #ddd;
 		padding: .5em 1em;
 		overflow: hidden;
+		border-radius: 3px;
 	}	
 }
 
@@ -140,6 +144,12 @@ $previewSize: 150px;
 div.guidelines {
 	> div {
 		clear: both;
+		padding: 3em 0;
+		
+		h2 {
+			margin-bottom: 1em;
+		}
+		
 	}
 }
 
