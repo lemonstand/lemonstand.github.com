@@ -18,6 +18,7 @@ $textNormal: #323232;
 h1, h2, h3, h4, h5 {
 	font-family: "proxima-nova";
 	line-height: 100%;
+	font-weight: light;
 	margin: 1.5em 0 .25em;
 	color: $textNormal;
 }
@@ -28,7 +29,7 @@ h4, h5 {
 	font-weight: bold;
 }
 h1.banner {
-	font-size: 4em;
+	font-size: 3em;
 	margin-top: 0;
 }
 h2.banner {
@@ -38,6 +39,42 @@ h2.banner {
 
 p, li, code, pre {
 	color: $textNormal;
+	font-size: 1em;
+	font-weight: normal;
+}
+p {
+	margin: .5em 0;
+}
+
+ul, ol {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+ul {
+	li {
+		list-style-type: square;
+	}
+}
+
+blockquote {
+	margin: 2em 2em 2em 1em;
+	border: 0;
+
+	p {
+		font-family: 'ff-tisa-web-pro', Georgia;
+		font-size: 1.1em;
+		color: #646464;
+	}
+}
+
+.ls-formal {
+	
+	h1.banner {
+		font-size: 5em;
+	}
+	h2.banner {
+		font-size: 3em;
+	}
 }
 
 a.btn {
@@ -124,16 +161,6 @@ nav.menu {
 	}
 }
 
-
-div.examples {
-	div.type-examples {
-		border: 1px solid #ddd;
-		padding: .5em 1em;
-		overflow: hidden;
-		border-radius: 3px;
-	}	
-}
-
 $previewSize: 150px;
 
 div.guide-category {
@@ -197,15 +224,28 @@ div.guide-category {
 
 
 div.guidelines {
+
 	> div {
 		clear: both;
 		padding: 3em 0;
+		overflow: hidden;
 		
-		h2 {
+		> h2 {
 			margin-bottom: 1em;
 			text-align: center;
 		}
 		
+	}
+
+
+	div.examples {
+		div.type-examples {
+			border: 1px solid #ddd;
+			padding: .5em 1em;
+			margin: 1em 0;
+			overflow: hidden;
+			border-radius: .5em;
+		}	
 	}
 
 
@@ -226,7 +266,6 @@ div.guidelines {
 
 			p {
 				text-align: left;
-				font-size: .9em;
 			}
 			
 		}
