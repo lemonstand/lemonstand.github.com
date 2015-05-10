@@ -1,4 +1,4 @@
-/* TODO 
+/* TODO
 
 	- move colours to separate sheet (auto-gen)
 */
@@ -25,7 +25,7 @@ $textNormal: #323232;
 	font-family: 'ff-tisa-web-pro', Georgia;
 }
 .montserrat {
-	font-family: Montserrat, "Helvetica Neu", Helvetica;	
+	font-family: Montserrat, "Helvetica Neu", Helvetica;
 }
 
 h1, h2, h3, h4, h5 {
@@ -52,7 +52,7 @@ h2.banner {
 
 p, li, code, pre {
 	color: $textNormal;
-	font-size: 1em;
+	font-size: 1.15em;
 	font-weight: normal;
 }
 p, li {
@@ -89,12 +89,39 @@ blockquote {
 }
 
 .ls-formal {
-	
+
 	h1.banner {
 		font-size: 5em;
 	}
 	h1, h2.banner {
 		font-size: 3em;
+	}
+	p, li {
+		font-size: 1.25em;
+		font-weight: 300;
+	}
+}
+.ls-industrial {
+
+	h1.banner {
+		font-weight: bold;
+	}
+	h1, h2.banner {
+		font-weight: bold;
+	}
+	p, li {
+	}
+}
+.ls-hipster {
+
+
+}
+
+.ls-party {
+
+	h1.banner, h2.banner,
+	h1, h2, h3 {
+		font-family: Montserrat, "Helvetica Neu", Helvetica;
 	}
 	p, li {
 		font-size: 1.1em;
@@ -216,12 +243,12 @@ div.guidelines {
 		clear: both;
 		padding: 3em 0;
 		overflow: hidden;
-		
+
 		> h2 {
 			margin-bottom: 1em;
 			text-align: center;
 		}
-		
+
 	}
 
 	ul.font-samples {
@@ -256,13 +283,13 @@ div.guidelines {
 			margin: 1em 0;
 			overflow: hidden;
 			border-radius: .5em;
-		}	
+		}
 	}
 
 
 	ul.panels-2 {
 		position: relative; left: -1%;
-		width: 102%; 
+		width: 102%;
 		margin: 0; padding: 2em 0 0;
 		overflow: visible;
 
@@ -277,7 +304,7 @@ div.guidelines {
 			p {
 				text-align: left;
 			}
-			
+
 		}
 
 	}
