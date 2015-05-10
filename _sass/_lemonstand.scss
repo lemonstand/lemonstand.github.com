@@ -12,12 +12,14 @@ $okBlueAlt: #0087c8;
 
 $bgMid: #DCDCDC;
 
+$textNormal: #323232;
 
 
 h1, h2, h3, h4, h5 {
 	font-family: "proxima-nova";
 	line-height: 100%;
 	margin: 1.5em 0 .25em;
+	color: $textNormal;
 }
 h3, h5 {
 	text-transform: uppercase;
@@ -32,6 +34,10 @@ h1.banner {
 h2.banner {
 	font-size: 2em;
 	margin-top: 0;
+}
+
+p, li, code, pre {
+	color: $textNormal;
 }
 
 a.btn {
@@ -141,20 +147,9 @@ div.examples {
 
 $previewSize: 150px;
 
-div.guidelines {
-	> div {
-		clear: both;
-		padding: 3em 0;
-		
-		h2 {
-			margin-bottom: 1em;
-		}
-		
-	}
-}
-
 div.guide-category {
 	clear: both;
+	padding-bottom: 2em;
 
 	> h3 {
 		font-weight: bold;
@@ -164,6 +159,7 @@ div.guide-category {
 		position: relative;
 		padding-left: 0; margin-left: 0;
 		clear: both;
+		overflow: hidden;
 
 		li {
 			position: relative;
@@ -209,3 +205,43 @@ div.guide-category {
 		}
 	}
 }
+
+
+div.guidelines {
+	> div {
+		clear: both;
+		padding: 3em 0;
+		
+		h2 {
+			margin-bottom: 1em;
+			text-align: center;
+		}
+		
+	}
+
+
+	ul.dress-overview {
+		position: relative; left: -1%;
+		width: 102%; 
+		margin: 0; padding: 2em 0 0;
+		overflow: visible;
+
+
+		> li {
+			list-style-type: none;
+			margin: 5% 1%; padding: 1%;
+			float: left;
+			width: 47%;
+			display: inline-block;
+			text-align: center;
+
+			p {
+				text-align: left;
+				font-size: .9em;
+			}
+			
+		}
+
+	}
+}
+

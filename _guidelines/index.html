@@ -4,18 +4,10 @@ layout: guidelines
 
 <div class="guidelines" ng-app="guidelines">
 
-  <h1 class="page-heading">Guidelines</h1>
+  <h1 class="banner">LemonStand Design Guidelines</h1>
 
-  <div class="">
-    <h2>Notes</h2>
 
-    <ul>
-      <li>A Bootstrap theme, so includes grids, widgets, and basic typogrpahy</li>
-      <li>Text sizing and spacing is measured in EMs</li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
+
   <div ng-include="'dress-template.html'"></div>
   <div ng-include="'colours-template.html'" ng-controller="colorsCtrl" >
   </div>
@@ -23,6 +15,11 @@ layout: guidelines
   <div ng-include="'icons-template.html'"></div>
   <div ng-include="'widgets-template.html'"></div>
   <div ng-include="'metaphors-template.html'"></div>
+
+  <section class="appendix">
+    <div ng-include="'guideline-notes.html'"></div>
+  </section>
+
 
 </div>
 
