@@ -7,25 +7,13 @@
                     "colour": "#006fb9",
                     "name": "LS Blue",
                     "tags": []
-                },
-                {
-                    "alt": "",
-                    "colour": "#3176B6",
-                    "name": "LS Blue wrong",
-                    "tags": []
-                },                
+                },              
                 {
                     "alt": "",
                     "colour": "#f0c332",
                     "name": "LS Lemon",
                     "tags": []
-                },
-                {
-                    "alt": "",
-                    "colour": "#E7BD3C",
-                    "name": "LS Lemon wrong",
-                    "tags": []
-                }          
+                }                
             ],
             "title": "Brand Colours"
 
@@ -128,6 +116,26 @@
                 }
             ],
             "title": "Text colours"
+        },
+        {
+            "palette": [
+
+
+                {
+                    "alt": "",
+                    "colour": "#E7BD3C",
+                    "name": "LS Lemon wrong",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#3176B6",
+                    "name": "LS Blue wrong",
+                    "tags": []
+                }
+
+            ],
+            "title": "Off-brand colours"
         }
     ]
 }
