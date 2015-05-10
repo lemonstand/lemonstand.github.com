@@ -6,6 +6,16 @@ layout: guidelines
 
   <h1 class="banner">LemonStand Design Guidelines</h1>
 
+  <header class="page-menu">
+  <nav class="btn-group" ng-controller="pageMenu">
+      <a class="btn btn-default" ng-click="scrollTo('dress')">Dress</a>
+      <a class="btn btn-default" ng-click="scrollTo('colours')">Colours</a>
+      <a class="btn btn-default" ng-click="scrollTo('icography')">Icons</a>
+      <a class="btn btn-default" ng-click="scrollTo('type')">Type</a>
+      <a class="btn btn-default" ng-click="scrollTo('widgets')">Widgets</a>
+      <a class="btn btn-default" ng-click="scrollTo('metaphors')">Metaphors</a>
+  </nav>
+  </header>
 
 
   <div ng-include="'dress-template.html'"></div>
@@ -39,6 +49,19 @@ var
       $interpolateProvider.startSymbol('[[');
       $interpolateProvider.endSymbol(']]');
     }),
+
+  pageMenu = app.controller('pageMenu', 
+    function($scope, $location, $anchorScroll) {
+      console.log('started', $scope);
+
+      $scope.scrollTo = function(id) {
+        console.log(id);
+
+        $location.url('');
+        $location.hash(id);
+        $anchorScroll();
+      }
+    });
 
   /* Set up the colour display */
   coloursCtrl = app.controller('colorsCtrl',

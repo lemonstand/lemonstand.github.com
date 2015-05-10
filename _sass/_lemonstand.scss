@@ -97,7 +97,7 @@ a.btn {
 	color: inherit;
 }
 
-header {
+header.site-header {
 	a.site-title {
 		text-decoration: none;
 
@@ -105,70 +105,32 @@ header {
 			width: 238px;
 		}
 	}
-}
 
-.page-content {
+	nav.menu {
+		float: right;
 
-	nav {
-		display: inline-block;
-		width: 100%;
-		text-align: center;
-		margin: 0 0 1em 0;
+		font-weight: 300;
+		font-size: .9em;
+		text-transform: uppercase;
+		padding: 1.5em 0;
 
-		li {
-			list-style-type: none;
-			display: inline;
-			margin: .25em 1em;
-
-			&.current {
-				border-bottom: 4px solid $lemonBlue;
-			}
-
-			a {
-				text-transform: uppercase !important;
-				font-size: 10pt;
-			}
+		> a {
+			padding: 0 1em;
 		}
 	}
 }
+
 
 a {
 	color: $lemonBlue !important;
 	font-weight: bold;
 }
 
-
-nav.menu {
-	clear: both;
-
-	a {
-		text-transform: uppercase;
-		font-weight: 500;
-		font-size: 10.5pt;
-		margin-right: 1em;
-	}
-}
-
-nav.menu {
-	ul {
-		margin: 0 0 0 0; padding: 0;
-
-		li {
-			list-style-type: none;
-			margin: .5em; padding: .5em;
-		}
-	}
-	ul.main-menu {
-		li {
-			float: left;
-
-			ul.sub-menu {
-
-				li {
-
-				}
-			}
-
+.page-menu {
+	text-align: center;
+	nav {
+		a.btn.btn-default {
+			color: $textNormal !important;
 		}
 	}
 }
