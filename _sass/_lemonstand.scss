@@ -42,13 +42,20 @@ p, li, code, pre {
 	font-size: 1em;
 	font-weight: normal;
 }
+p, li {
+	font-weight: normal;
+}
 p {
 	margin: .5em 0;
+	line-height: 165%;
 }
 
 ul, ol {
 	margin-top: 1em;
 	margin-bottom: 1em;
+	li {
+		font-size: .9em;
+	}
 }
 ul {
 	li {
@@ -64,6 +71,7 @@ blockquote {
 		font-family: 'ff-tisa-web-pro', Georgia;
 		font-size: 1.1em;
 		color: #646464;
+		line-height: 175%;
 	}
 }
 
@@ -72,8 +80,12 @@ blockquote {
 	h1.banner {
 		font-size: 5em;
 	}
-	h2.banner {
+	h1, h2.banner {
 		font-size: 3em;
+	}
+	p, li {
+		font-size: 1.1em;
+		font-weight: 300;
 	}
 }
 
