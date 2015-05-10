@@ -1,7 +1,30 @@
-<h2><a id="type"></a> Type and spacing</h2>
+<h2><a id="type"></a> Type and whitespace</h2>
 
 <div ng-controller="typeThemeSwitcher">
 
+	<p>We are currently using the following typefaces:</p>
+
+	<ul class="font-samples">
+		<li class="proxima">
+			Proxima Nova
+			<p>Used for smaller headlines and body text. Smart and functional.</p>
+		</li>
+		<li class="proxima-light">
+			<em>Proxima Nova light</em>
+			<p>Used for headlines and larger text. Elegant and lovely.</p>
+		</li>
+		<li class="ff-tisa">
+			<em>FF Tisa Pro</em>
+			<p>Used to show the voice of the people. For quotes, notes, and descriptive elements written by our users and well wishers.</p>
+		</li>
+		<li class="montserrat">
+			<em>Montserrat</em>
+			<p>Used for buttons and interactive controls. It's a bold, imperative to do something now. Especially powerful when combined with ALL-CAPS.</p>
+		</li>
+
+	</ul>
+
+	<h3>Examples</h3>
 	<nav class="btn-group">
 		<a 
 			ng-repeat="style in dressStyles"
@@ -33,7 +56,7 @@
 				<li>Aliquam id enim quis ante ullamcorper consequat.</li>
 				<li>Donec eu quam consequat, laoreet ex quis, euismod tortor.</li>
 			</ul>
-			
+
 			<h4>Note headline</h4>
 			<h5>Tiny headline</h5>
 

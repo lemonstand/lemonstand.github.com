@@ -14,9 +14,22 @@ $bgMid: #DCDCDC;
 
 $textNormal: #323232;
 
+.proxima {
+	font-family: "proxima-nova";
+}
+.proxima-light {
+	font-family: "proxima-nova";
+	font-weight: 100;
+}
+.ff-tisa {
+	font-family: 'ff-tisa-web-pro', Georgia;
+}
+.montserrat {
+	font-family: Montserrat, "Helvetica Neu", Helvetica;	
+}
 
 h1, h2, h3, h4, h5 {
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", "Helvetica Neu", Helvetica;
 	line-height: 100%;
 	font-weight: light;
 	margin: 1.5em 0 .25em;
@@ -211,6 +224,30 @@ div.guidelines {
 		
 	}
 
+	ul.font-samples {
+		margin: 2em 0; padding: 0;
+
+		border-bottom: 1px solid #C8C8C8;
+
+		li {
+			font-size: 1.1em;
+			list-style-type: none;
+			border-top: 1px solid #C8C8C8;
+			padding-top: .25em;
+
+			em {
+				font-weight: 100;
+				font-style: normal;
+			}
+			p {
+				font-size: .85em;
+				margin-top: 0;
+				line-height: 130%;
+			}
+
+
+		}
+	}
 
 	div.examples {
 		div.type-examples {

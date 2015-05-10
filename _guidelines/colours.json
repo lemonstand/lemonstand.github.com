@@ -21,41 +21,6 @@
         {
             "palette": [
                 {
-                    "alt": "",
-                    "colour": "#F0F0F0",
-                    "name": "BG Lightest",
-                    "tags": []
-                },
-                {
-                    "alt": "",
-                    "colour": "#DCDCDC",
-                    "name": "BG Light",
-                    "tags": []
-                },
-                {
-                    "alt": "",
-                    "colour": "#C8C8C8",
-                    "name": "BG Mid",
-                    "tags": []
-                },
-                {
-                    "alt": "",
-                    "colour": "#969696",
-                    "name": "BG Dark",
-                    "tags": []
-                },
-                {
-                    "alt": "",
-                    "colour": "#323232",
-                    "name": "BG Darkest",
-                    "tags": []
-                }
-            ],
-            "title": "Borders and backgrounds"
-        },
-        {
-            "palette": [
-                {
                     "alt": " #8fd090",
                     "colour": "#55a537",
                     "name": "Roger that",
@@ -87,6 +52,41 @@
                 }
             ],
             "title": "Message hints"
+        },
+        {
+            "palette": [
+                {
+                    "alt": "",
+                    "colour": "#F0F0F0",
+                    "name": "BG Lightest",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#DCDCDC",
+                    "name": "BG Light",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#C8C8C8",
+                    "name": "BG Mid",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#969696",
+                    "name": "BG Dark",
+                    "tags": []
+                },
+                {
+                    "alt": "",
+                    "colour": "#323232",
+                    "name": "BG Darkest",
+                    "tags": []
+                }
+            ],
+            "title": "Borders and backgrounds"
         },
         {
             "palette": [
