@@ -21,6 +21,17 @@
         {
             "palette": [
                 {
+                    "colour": "#fdd55e",
+                    "name": "SQ Background",
+                    "tags": []
+                }             
+            ],
+            "title": "Special Backgrounds"
+
+        },        
+        {
+            "palette": [
+                {
                     "alt": " #8fd090",
                     "colour": "#55a537",
                     "name": "Roger that",
