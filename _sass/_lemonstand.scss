@@ -238,6 +238,41 @@ div.guide-category {
 	}
 }
 
+div.themes-gallery {
+	ul.gallery {
+		clear: both; overflow: hidden;
+		margin: 0; padding: 0;
+
+		li {
+			position: relative;
+			width: 32%;
+			height: 10em;
+			float: left;
+			padding: 0; margin: 0;
+			list-style-type: none;
+
+			> div {
+				padding: 4px 5px;
+
+				h4 {
+					margin: 0; padding: 0;
+				}
+				> span {
+
+				}
+				> nav {
+					a {
+						color: inherit;
+					}
+					var {
+						font-style: normal;
+					}
+				}
+			}
+
+		}
+	}
+}
 
 div.guidelines {
 

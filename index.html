@@ -11,15 +11,18 @@ layout: default
     <ul class="gallery" ng-controller="themesGallery">
 
       <li ng-repeat="p in projects | filterV1" class="block-linked">
+        <div>
         <h4><a href="[[p.html_url]]">[[p.name]]</a></h4>
         <span>[[p.description]]</span>
         <nav>
+          <a href="[[p.forks_url]]" title="Fork"><i class="fa fa-code-fork"></i></a>
           <a href="[[p.git_url]]" title="Clone"><i class="fa fa-github-alt"></i></a>
           <var title="love"><i class="fa fa-heartbeat"></i> [[p.forks_count + p.watchers_count + p.stargazers_count]]</var>
           <var title=""><i class="fa fa-bug"></i> [[p.open_issues_count]]</var>
 
           <var title="lang">[[p.language]]</var>
         </nav>
+        </div>
       </li>
     </ul>
 
