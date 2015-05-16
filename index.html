@@ -64,9 +64,13 @@ var
       $interpolateProvider.endSymbol(']]');
 
 
-       $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|git):/);
+      /* Allow GIT URLs */
+      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|git):/);
     });
 
+  /* Filter the projects:
+
+  */
   app.filter('filterV1', function() {
 
     return function (items) {
@@ -88,12 +92,20 @@ var
           } else if ( item.name.match(/(?:^lscloud|^ls2-theme)/)) {
             item.specialClass = 'theme';
           } else {
-            item.specialClass = 'project';
+            item.specialClass = 'zuperproject';
           }
 
           filtered.push(item);
         }
       }
+
+
+      var projectsSort = function(a, b) {
+            if (a.specialClass > b.specialClass) return -1;
+            else if (a.specialClass < b.specialClass) return 1;
+            else return 0;
+          }
+      filtered.sort(projectsSort);
       return filtered;
     };
 
@@ -107,13 +119,6 @@ var
         url: 'lemonstand-repos.json',
         method: 'GET',
         }).success(function(d, s, h, c) {
-
-          var byNameField = function(a, b) {
-                if (a.name < b.name) return -1;
-                else if (a.name > b.name) return 1;
-                else return 0;
-              }
-          d.sort(byNameField);
           $scope.projects = d;
         }).error(function(d, s, h, c) {
           console.log('Failed to load repos JSON');
