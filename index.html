@@ -2,7 +2,28 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home" ng-app="galleries">
+
+  <div class="themes-gallery">
+
+  <h2><a id="themes"></a> LemonStand community projects</h2>
+
+    <ul class="gallery" ng-controller="themesGallery">
+
+      <li ng-repeat="p in projects | filterV1" class="block-linked">
+        <h4><a href="[[p.html_url]]">[[p.name]]</a></h4>
+        <span>[[p.description]]</span>
+        <nav>
+          <a href="[[p.git_url]]" title="Clone"><i class="fa fa-github-alt"></i></a>
+          <var title="love"><i class="fa fa-heartbeat"></i> [[p.forks_count + p.watchers_count + p.stargazers_count]]</var>
+          <var title=""><i class="fa fa-bug"></i> [[p.open_issues_count]]</var>
+
+          <var title="lang">[[p.language]]</var>
+        </nav>
+      </li>
+    </ul>
+
+  </div>
 
   <h1 class="page-heading">News</h1>
 
@@ -19,3 +40,61 @@ layout: default
   </ul>
 
 </div>
+
+
+<script>
+var
+  app = angular.module(
+    'galleries',
+    [],
+    function($interpolateProvider) {
+
+      /* NOTE: We need to change the Angular template braces as this is rendered via Jekyll
+
+          * Using [[]] instead of {{}}
+      */
+
+      $interpolateProvider.startSymbol('[[');
+      $interpolateProvider.endSymbol(']]');
+    });
+
+  app.filter('filterV1', function() {
+
+    return function (items) {
+      var filtered = [],
+          l = items.length;
+
+      console.log(l);
+
+      for (var i = 0; i < l; i++) {
+        var item = items[i];
+        console.log(item.name);
+
+        if ( item.name.match(/^ls[-].*/) ) {
+          console.log("filtered", item.name);
+        } else {
+          filtered.push(item);
+        }
+      }
+      return filtered;
+    };
+
+  });
+
+  /* Set up the colour display */
+  themeGalleries = app.controller('themesGallery',
+    function($scope, $http) {
+
+      $http({
+        url: 'lemonstand-repos.json',
+        method: 'GET',
+        }).success(function(d, s, h, c) {
+          $scope.projects = d;
+        }).error(function(d, s, h, c) {
+          console.log('Failed to load colours JSON');
+          $scope.status = s;
+       });
+
+    });
+
+</script>

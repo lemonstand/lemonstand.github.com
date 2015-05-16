@@ -1,3 +1,3 @@
 #!/bin/sh
 
-curl https://api.github.com/orgs/lemonstand/repos?type=public > lemonstand-repos.json
+curl --output lemonstand-repos.json https://api.github.com/orgs/lemonstand/repos?per_page=500&type=public
