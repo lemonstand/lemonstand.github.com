@@ -238,49 +238,126 @@ div.guide-category {
 	}
 }
 
+$projectBorder: rgba(255,255,255,.95);
 div.themes-gallery {
+	h2 {
+		text-align: center;
+	}
 	ul.gallery {
+		position: relative;
 		clear: both; overflow: hidden;
-		margin: 0; padding: 0;
+		margin: 2em 0 0 0; padding: 0;
+		left: -5.5%;
+		width: 111%;
 
 		li {
 			position: relative;
 			width: 32%;
-			height: 10em;
+			height: 12em;
+
 			float: left;
 			padding: 0; margin: .5%;
 			list-style-type: none;
-			border: 1px solid #aaa;
+			border: 1px solid $projectBorder;
+			border-radius: .35em;
+			background-color: #006fb9;
+
+			&.omni {
+				background-color: #55a537;
+			}
+			&.aws {
+				background-color: #ebb42d;
+			}
+			&.theme {
+				background-color: #0087c8;
+			}
 
 			> div {
-				padding: 4px 5px;
+				padding: 7px 10px;
 
 
 				h4 {
-					margin: 0; padding: 0;
-				}
-				> span {
+					margin: 0 0 .5em 0; padding: 0;
+
+					a {
+						color: #fff !important;
+						font-size: 13pt;
+					}
 
 				}
+				> h5 {
+					margin: .5em 0 0; padding: 0;
+					color: #fff !important;
+					font-weight: 100;
+					line-height: 110%;
+					text-transform: none;
+				}
+
 				> nav {
 					position: absolute;
 					bottom: 0; left: 0;
 					width: 100%;
 					display: inline-block;
-					border-top: 1px solid #aaa;
+					border-top: 1px solid $projectBorder;
 
 					> * {
+						display: inline-block;
+						line-height: 20px;
+						width: 15%;
+						padding-top: 2px;
+						text-align: center;
+						vertical-align: middle;
+
+
 						+ * {
-							border-left: 1px solid #aaa;
+							border-left: 1px solid $projectBorder;
 						}
 
-						padding: 4px;
+						padding: 5px 7px;
+						text-align: center;
+						color: #fff !important;
+
+						a, a > i {
+							color: #fff !important;
+
+						}
+					}
+					i {
+						font-size: 18px;
+						opacity: .75;
 					}
 					a {
-						color: inherit;
+
+						&:hover {
+							i {
+								opacity: 1;
+							}
+						}
 					}
 					var {
+						position: relative;
 						font-style: normal;
+						width: 23%;
+						cursor: pointer;
+
+						&.lang {
+							width: 100%;
+							display: block;
+							border-top: 1px solid $projectBorder;
+							text-transform: uppercase;
+							border-left: 0;
+							font-size: 9.5pt;
+							letter-spacing: 1px;
+							line-height: 16px;
+						}
+
+						> strong {
+							font-size: .8emm;
+							padding-top: .1em;
+							padding-left: .25em;
+							font-weight: normal;
+							opacity: .85;
+						}
 					}
 				}
 			}

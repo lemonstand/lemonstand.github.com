@@ -10,17 +10,18 @@ layout: default
 
     <ul class="gallery" ng-controller="themesGallery">
 
-      <li ng-repeat="p in projects | filterV1" class="block-linked">
+      <li ng-repeat="p in projects | filterV1" class="block-linked [[p.specialClass]]">
         <div>
         <h4><a href="[[p.html_url]]">[[p.name]]</a></h4>
-        <span>[[p.description]]</span>
+        <h5>[[p.description]]</h5>
         <nav>
-          <a href="[[p.forks_url]]" title="Fork"><i class="fa fa-code-fork"></i></a>
-          <a href="[[p.git_url]]" title="Clone"><i class="fa fa-github-alt"></i></a>
-          <var title="love"><i class="fa fa-heartbeat"></i> [[p.forks_count + p.watchers_count + p.stargazers_count]]</var>
-          <var title=""><i class="fa fa-bug"></i> [[p.open_issues_count]]</var>
+          <a href="[[p.forks_url]]" class="fork"><i class="fa fa-code-fork"></i></a>
+          <a href="[[p.git_url]]" class="clone"><i class="fa fa-github-alt"></i></a>
+          <a href="[[p.collaborators_url]]"><i class="fa fa-users"></i></a>
+          <var class="love"><i class="fa fa-heartbeat"></i> <strong>[[p.forks_count + p.watchers_count + p.stargazers_count]]</strong></var>
+          <var class="bug"><i class="fa fa-bug"></i> <strong>[[p.open_issues_count]]</strong></var>
 
-          <var title="lang">[[p.language]]</var>
+          <var class="lang"><strong>[[p.language]]</strong></var>
         </nav>
         </div>
       </li>
@@ -66,18 +67,27 @@ var
   app.filter('filterV1', function() {
 
     return function (items) {
-      var filtered = [],
-          l = items.length;
+      if (typeof items === 'undefined') return;
 
-      console.log(l);
+      var filtered = [];
+          l = items.length;
 
       for (var i = 0; i < l; i++) {
         var item = items[i];
-        console.log(item.name);
 
         if ( item.name.match(/^ls[-].*/) ) {
-          console.log("filtered", item.name);
+          console.log("skipping", item.name);
         } else {
+          if ( item.name.match(/^omnipay.*/) ) {
+            item.specialClass = 'omni';
+          } else if ( item.name.match(/(?:opsworks|amazon)/) ) {
+            item.specialClass = 'aws';
+          } else if ( item.name.match(/^lscloud/)) {
+            item.specialClass = 'theme';
+          } else {
+            item.specialClass = 'project';
+          }
+
           filtered.push(item);
         }
       }
@@ -94,9 +104,16 @@ var
         url: 'lemonstand-repos.json',
         method: 'GET',
         }).success(function(d, s, h, c) {
+
+          var byNameField = function(a, b) {
+                if (a.name < b.name) return -1;
+                else if (a.name > b.name) return 1;
+                else return 0;
+              }
+          d.sort(byNameField);
           $scope.projects = d;
         }).error(function(d, s, h, c) {
-          console.log('Failed to load colours JSON');
+          console.log('Failed to load repos JSON');
           $scope.status = s;
        });
 
