@@ -328,13 +328,13 @@ div.themes-gallery {
 					i {
 						position: relative; top: 1px;
 						font-size: 16px;
-						opacity: .75;
+
 					}
 					a {
 
 						&:hover {
 							i {
-								opacity: 1;
+
 							}
 						}
 					}
@@ -349,7 +349,6 @@ div.themes-gallery {
 							padding-top: .1em;
 							padding-left: .15em;
 							font-weight: normal;
-							opacity: .85;
 						}
 
 						&.lang {
@@ -358,11 +357,10 @@ div.themes-gallery {
 							border-top: 1px solid $projectBorder;
 							text-transform: uppercase;
 							border-left: 0;
-							letter-spacing: 1px;
+							letter-spacing: 2px;
 
 							strong {
 								font-size: .85em;
-								font-weight: bold;
 							}
 						}
 
