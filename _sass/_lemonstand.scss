@@ -326,7 +326,8 @@ div.themes-gallery {
 						}
 					}
 					i {
-						font-size: 18px;
+						position: relative; top: 1px;
+						font-size: 16px;
 						opacity: .75;
 					}
 					a {
@@ -340,8 +341,16 @@ div.themes-gallery {
 					var {
 						position: relative;
 						font-style: normal;
-						width: 23%;
-						cursor: pointer;
+						width: 21%;
+						cursor: default;
+
+						> strong {
+							font-size: .75em;
+							padding-top: .1em;
+							padding-left: .15em;
+							font-weight: normal;
+							opacity: .85;
+						}
 
 						&.lang {
 							width: 100%;
@@ -349,18 +358,13 @@ div.themes-gallery {
 							border-top: 1px solid $projectBorder;
 							text-transform: uppercase;
 							border-left: 0;
-							font-size: 9.5pt;
 							letter-spacing: 1px;
-							line-height: 16px;
+
+							strong {
+								font-size: .85em;
+							}
 						}
 
-						> strong {
-							font-size: .8emm;
-							padding-top: .1em;
-							padding-left: .25em;
-							font-weight: normal;
-							opacity: .85;
-						}
 					}
 				}
 			}
