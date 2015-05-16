@@ -239,6 +239,7 @@ div.guide-category {
 }
 
 $projectBorder: rgba(255,255,255,.95);
+
 div.themes-gallery {
 	h2 {
 		text-align: center;
@@ -258,7 +259,6 @@ div.themes-gallery {
 			float: left;
 			padding: 0; margin: .5%;
 			list-style-type: none;
-			border: 1px solid $projectBorder;
 			border-radius: .35em;
 			background-color: #006fb9;
 
@@ -284,7 +284,7 @@ div.themes-gallery {
 
 					a {
 						color: #fff !important;
-						font-size: 13pt;
+						font-size: 12pt;
 					}
 
 				}
@@ -357,7 +357,7 @@ div.themes-gallery {
 							border-top: 1px solid $projectBorder;
 							text-transform: uppercase;
 							border-left: 0;
-							letter-spacing: 2px;
+							letter-spacing: 1px;
 
 							strong {
 								font-size: .85em;
@@ -371,6 +371,31 @@ div.themes-gallery {
 		}
 	}
 }
+
+@include media-query($on-laptop) {
+	div.themes-gallery {
+		ul.gallery {
+			margin-left: 5%;
+			li {
+				width: 44%;
+			}
+		}
+	}
+}
+
+@include media-query($on-palm) {
+	div.themes-gallery {
+		ul.gallery {
+			width: 100%;
+			margin-left: 5%; margin-right: 5%;
+
+			li {
+				width: 99.5%;
+			}
+		}
+	}
+}
+
 
 div.guidelines {
 
