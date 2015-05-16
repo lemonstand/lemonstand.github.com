@@ -248,11 +248,13 @@ div.themes-gallery {
 			width: 32%;
 			height: 10em;
 			float: left;
-			padding: 0; margin: 0;
+			padding: 0; margin: .5%;
 			list-style-type: none;
+			border: 1px solid #aaa;
 
 			> div {
 				padding: 4px 5px;
+
 
 				h4 {
 					margin: 0; padding: 0;
@@ -261,6 +263,19 @@ div.themes-gallery {
 
 				}
 				> nav {
+					position: absolute;
+					bottom: 0; left: 0;
+					width: 100%;
+					display: inline-block;
+					border-top: 1px solid #aaa;
+
+					> * {
+						+ * {
+							border-left: 1px solid #aaa;
+						}
+
+						padding: 4px;
+					}
 					a {
 						color: inherit;
 					}
