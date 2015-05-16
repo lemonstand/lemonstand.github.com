@@ -82,7 +82,7 @@ var
       for (var i = 0; i < l; i++) {
         var item = items[i];
 
-        if ( item.name.match(/^ls[-].*/) ) {
+        if ( item.name.match(/(?:^ls[-]|lemonstand.github.com)/) ) {
           console.log("skipping", item.name);
         } else {
           if ( item.name.match(/^omnipay.*/) ) {
@@ -91,6 +91,8 @@ var
             item.specialClass = 'aws';
           } else if ( item.name.match(/(?:^lscloud|^ls2-theme)/)) {
             item.specialClass = 'theme';
+          } else if ( item.name == 'tyrion') {
+            item.specialClass = 'slackbot';
           } else {
             item.specialClass = 'zuperproject';
           }
