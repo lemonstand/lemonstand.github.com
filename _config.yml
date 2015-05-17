@@ -4,8 +4,7 @@ taglne: We &#9825; our community
 email: community@lemonstand.com
 description: >
     These are some of our community projects, including themes, libraries, and
-    design resources. Looking to build a beautiful, flexible online store? Try
-    <a href='http://lemonstand.com'>LemonStand</a> for free.
+    design resources.
 baseurl: ""
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: lemonstand
