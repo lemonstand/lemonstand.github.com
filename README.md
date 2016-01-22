@@ -2,6 +2,15 @@
 
 Isn't it lovely?
 
+## Update the repo JSON
+
+The community site caches the repo JSON to prevent calling Github for every page load. To update:
+
+```
+$ ./bin/update-repos.sh
+$ git push origin master
+````
+
 ## Instructions
 
 1. Install Jekyll (`sudo gem install jekyll`). This kinda assumes `gem` is installed too.
