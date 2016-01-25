@@ -12,6 +12,7 @@ layout: guidelines
       <a class="btn btn-default" ng-click="scrollTo('colours')">Colours</a>
       <a class="btn btn-default" ng-click="scrollTo('icography')">Icons</a>
       <a class="btn btn-default" ng-click="scrollTo('type')">Type</a>
+      <a class="btn btn-default" ng-click="scrollTo('ui')">UI</a>
       <a class="btn btn-default" ng-click="scrollTo('widgets')">Widgets</a>
       <a class="btn btn-default" ng-click="scrollTo('metaphors')">Metaphors</a>
   </nav>
@@ -50,7 +51,7 @@ var
       $interpolateProvider.endSymbol(']]');
     }),
 
-  pageMenu = app.controller('pageMenu', 
+  pageMenu = app.controller('pageMenu',
     function($scope, $location, $anchorScroll) {
       console.log('started', $scope);
 
@@ -81,7 +82,7 @@ var
 
     }),
 
-  typeThemeSwitcher = app.controller('typeThemeSwitcher', 
+  typeThemeSwitcher = app.controller('typeThemeSwitcher',
     function($scope, $http) {
 
       $scope.dressStyles = [
@@ -90,11 +91,11 @@ var
           'name': 'Formal',
           'isSelected': 0
         },
-        {    
+        {
           'id': 'ls-industrial',
           'name': 'Industrial',
           'isSelected': 0
-        },  
+        },
         {
           'id': 'ls-hipster',
           'name': 'Hipster',
@@ -104,19 +105,19 @@ var
           'id': 'ls-party',
           'name': 'Party',
           'isSelected': 0
-        }  
-      ];     
+        }
+      ];
 
       $scope.currentSelection  = $scope.dressStyles[0];
       $scope.currentSelection.isSelected = 1;
 
       $scope.switchTo = function(idx) {
-        
+
         $scope.currentSelection.isSelected = 0;
         $scope.currentSelection = $scope.dressStyles[idx];
         $scope.currentSelection.isSelected = 1;
         $scope.dressType = event.target.id;
-        
+
       };
 
     });
