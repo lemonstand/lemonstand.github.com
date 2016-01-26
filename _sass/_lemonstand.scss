@@ -496,20 +496,23 @@ div.guidelines {
 	}
 
 	ul.ui {
-		li.headings {
-			 {
+		li {
+			.headings {
 				font-family: Montserrat, "Helvetica Neu", Helvetica;
 				font-size: 24px;
 				font-weight: 300;
 			}
+			.numbers {
+				font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
+				font-size: 12px;
+			}
+			.text {
+				font-family: Montserrat, "Helvetica Neu", Helvetica;
+				font-size: 12px;
+			}
 		}
 	}
 
-	li.headings {
-		font-family: Montserrat, "Helvetica Neu", Helvetica;
-		font-size: 24px;
-		font-weight: 300;
-	}
 
 	li.text {
 
