@@ -522,19 +522,22 @@ div.guidelines {
 
 			th {
 				vertical-align: bottom;
-				padding-right: 24px;
+				padding: 8px 24px 8px 8px;
 				font-weight: bold;
+				border-bottom: 3px solid #D9DCE0;
 			}
 		}
 
 		tr {
-			td {
-				padding: 8px;
-				line-height: 18px;
-				text-align: left;
-				vertical-align: top;
-				border-top: 1px solid #f0f0f0;
-			}
+
+		}
+
+		td {
+			padding: 8px;
+			line-height: 18px;
+			text-align: left;
+			vertical-align: top;
+			border-top: 1px solid #f0f0f0;
 		}
 	}
 
