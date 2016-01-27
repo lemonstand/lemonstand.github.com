@@ -496,29 +496,37 @@ div.guidelines {
 	}
 
 	ul.ui {
-		li {
+		li { list-style-type: none;
+
 			&.headings {
 				font-family: Montserrat, "Helvetica Neu", Helvetica;
 				font-size: 24px;
 				font-weight: 300;
 			}
-			&.numbers {
-				font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
-				font-size: 12px;
-			}
 			&.text {
 				font-family: Montserrat, "Helvetica Neu", Helvetica;
+				font-size: 12px;
+			}
+			&.numbers {
+				font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
 				font-size: 12px;
 			}
 		}
 	}
 
-
-	li.text {
-
-	}
-
-	li.numbers {
-
+	a {
+		&.btn {
+			text-transform: uppercase;
+			text-align: center;
+			box-shadow: none;
+			text-shadow: none;
+			width: auto;
+			font-family: 'Montserrat', sans-serif !important;
+			font-weight: bold;
+			color: gray;
+			background-image: linear-gradient(to bottom,#e8e8e8, #dbdbdb);
+			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		}
 	}
 }
