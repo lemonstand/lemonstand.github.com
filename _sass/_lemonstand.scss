@@ -497,6 +497,7 @@ div.guidelines {
 
 	ul.ui {
 		li { list-style-type: none;
+			 color: #323232;
 
 			&.headings {
 				font-family: Montserrat, "Helvetica Neu", Helvetica;
@@ -515,7 +516,7 @@ div.guidelines {
 	}
 
 	a {
-		&.btn {
+		&.btn-action, .btn-save, .btn-delete {
 			text-transform: uppercase;
 			text-align: center;
 			box-shadow: none;
