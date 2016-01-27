@@ -515,6 +515,14 @@ div.guidelines {
 		}
 	}
 
+	.table td {
+		padding: 8px;
+		line-height: 18px;
+		text-align: left;
+		vertical-align: top;
+		border-top: 1px solid #f0f0f0;
+	}
+
 	a {
 		&.btn-action, .btn-save, .btn-delete {
 			text-transform: uppercase;
