@@ -567,7 +567,7 @@ div.guidelines {
 
 		}
 		&.action {
-			color: gray;
+			color: gray !important;
 			background-image: linear-gradient(to bottom,#e8e8e8, #dbdbdb);
 			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
