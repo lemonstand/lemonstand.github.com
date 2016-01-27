@@ -495,40 +495,45 @@ div.guidelines {
 		}
 	}
 
+	.headings {
+		font-family: Montserrat, "Helvetica Neu", Helvetica;
+		font-size: 24px;
+		font-weight: 300;
+	}
+	.text {
+		font-family: Montserrat, "Helvetica Neu", Helvetica;
+		font-size: 12px;
+	}
+	.numbers {
+		font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
+		font-size: 12px;
+	}
+
 	ul.ui {
 		li { list-style-type: none;
 			 color: #323232;
-
-			&.headings {
-				font-family: Montserrat, "Helvetica Neu", Helvetica;
-				font-size: 24px;
-				font-weight: 300;
-			}
-			&.text {
-				font-family: Montserrat, "Helvetica Neu", Helvetica;
-				font-size: 12px;
-			}
-			&.numbers {
-				font-family: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
-				font-size: 12px;
-			}
 		}
 	}
 
 	table {
+		font-size: 12px;
 
 		thead {
 
 			th {
 				vertical-align: bottom;
+				padding-right: 24px;
+				font-weight: bold;
+			}
+		}
 
-				td {
-					padding: 8px;
-					line-height: 18px;
-					text-align: left;
-					vertical-align: top;
-					border-top: 1px solid #f0f0f0;
-				}
+		tr {
+			td {
+				padding: 8px;
+				line-height: 18px;
+				text-align: left;
+				vertical-align: top;
+				border-top: 1px solid #f0f0f0;
 			}
 		}
 	}
