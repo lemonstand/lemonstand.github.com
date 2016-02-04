@@ -10,6 +10,14 @@
     position: relative;
 }
 
+.crumbs {
+    &, a, a:active, a:visited {
+        font-size: 10pt;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: .8;
+    }
+}
 .site-title {
     font-size: 26px;
     line-height: 56px;
