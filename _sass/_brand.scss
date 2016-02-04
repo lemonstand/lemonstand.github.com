@@ -43,22 +43,36 @@ footer.community {
     border-top: 1px solid #aaa;
 }
 footer {
-    padding-top: 2em; padding-bottom: 1em;
+    padding-top: 2em; padding-bottom: 2em;
 
-    &.community {
-        padding-top: 4em; padding-bottom: 4em;
+    > div {
+
+        > p {
+            clear: both;
+            width: 100%;
+            color: #999;
+            margin-top: 2em;
+        }
     }
 
 	ul {
-        margin: 0; padding: 0;
-		li {
+        margin: 0 0 2em 0; padding: 0;
+        overflow: auto;
+
+		> li {
 			list-style-type: none;
             float: left;
             width: 25%;
             margin: 0; padding: 0;
 
-            &.description {
-                width: 50%;
+            &.learn-more {
+                width: 25%;
+            }
+            &.features {
+                width: 30%;
+            }
+            &.support {
+                width: 20%;
             }
 
             h2 {
@@ -89,6 +103,21 @@ footer {
 		}
 	}
 
+
+    &.community {
+        padding-top: 4em; padding-bottom: 4em;
+
+        ul {
+            > li {
+                width: 33%;
+
+                &.description {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
 	p {
 		font-weight: 300;
 		font-size: .9em;
@@ -97,8 +126,10 @@ footer {
 
 
 .btn {
+
 }
 
 .btn-outline {
-
+    border: 1px solid #555;
+    padding-left: 2em; padding-right: 2em;
 }
