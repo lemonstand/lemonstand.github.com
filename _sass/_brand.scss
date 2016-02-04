@@ -38,10 +38,33 @@ header.site-header {
 	}
 }
 
-footer {
+footer.community {
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+}
+footer.lemonstand,
+footer.community {
 	ul {
+        margin: 0; padding: 0;
 		li {
 			list-style-type: none;
+            float: left;
+            width: 25%;
+            margin: 0; padding: 0;
+
+            &.description {
+                width: 50%;
+            }
+
+            h2 {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            a {
+                display: block;
+                clear: both;
+            }
 		}
 	}
 
