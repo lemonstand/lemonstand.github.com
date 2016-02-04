@@ -42,8 +42,13 @@ footer.community {
     border-bottom: 1px solid #aaa;
     border-top: 1px solid #aaa;
 }
-footer.lemonstand,
-footer.community {
+footer {
+    padding-top: 2em; padding-bottom: 1em;
+
+    &.community {
+        padding-top: 4em; padding-bottom: 4em;
+    }
+
 	ul {
         margin: 0; padding: 0;
 		li {
@@ -57,13 +62,29 @@ footer.community {
             }
 
             h2 {
-                font-size: 14px;
+                font-size: 13px;
                 text-transform: uppercase;
                 font-weight: 700;
+                color: #444;
+                font-family: "Museo Rounded", sans-serif;
+                margin-top: 2em;
+                margin-bottom: 2em;
             }
+
             a {
                 display: block;
                 clear: both;
+                font-weight: 100;
+                color: #444 !important;
+                line-height: 175%;
+
+                &.site-title {
+                    margin-bottom: .35em;
+                }
+
+                &.btn {
+                    margin-top: 1em;
+                }
             }
 		}
 	}
