@@ -3,17 +3,6 @@
 	- move colours to separate sheet (auto-gen)
 */
 
-$lemonBlue: #1485ca;
-
-$textDark: #343433;
-
-$okBlue: #0073b4;
-$okBlueAlt: #0087c8;
-
-$bgMid: #DCDCDC;
-
-$textNormal: #323232;
-
 .proxima {
 	font-family: "proxima-nova";
 }
@@ -139,42 +128,6 @@ a.btn {
 	color: inherit;
 }
 
-header.site-header {
-	a.site-title {
-		text-decoration: none;
-
-		img {
-			width: 238px;
-		}
-	}
-
-	nav.menu {
-		float: right;
-
-		font-weight: 300;
-		font-size: .9em;
-		text-transform: uppercase;
-		padding: 1.5em 0;
-
-		> a {
-			padding: 0 1em;
-		}
-	}
-}
-
-footer {
-	ul {
-		li {
-			list-style-type: none;
-		}
-	}
-
-	p {
-		font-weight: 300;
-		font-size: .9em;
-	}
-}
-
 
 a {
 	color: $lemonBlue !important;
@@ -183,6 +136,8 @@ a {
 
 .page-menu {
 	text-align: center;
+	margin-top: 1em;
+
 	nav {
 		a.btn.btn-default {
 			color: $textNormal !important;
@@ -261,8 +216,8 @@ div.themes-gallery {
 		position: relative;
 		clear: both; overflow: hidden;
 		margin: 2em 0 0 0; padding: 0;
-		left: -5.5%;
-		width: 111%;
+		left: -1%;
+		width: 102%;
 
 		li {
 			position: relative;

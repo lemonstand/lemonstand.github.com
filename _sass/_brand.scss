@@ -1,0 +1,136 @@
+header.site-header {
+    padding-top: .25em;
+
+	a.site-title {
+		text-decoration: none;
+
+		img {
+			width: auto;
+		}
+
+        span {
+            color: $lemonYellow;
+            font-size: 9.5pt;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+	}
+
+	nav.menu {
+		float: right;
+
+		font-weight: 300;
+		text-transform: uppercase;
+		padding: 1.15em 0;
+
+
+		> a {
+			padding: 0 .5em;
+
+            font-family: "Museo Rounded", sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+
+            &:hover {
+                text-decoration: none;
+                color: $lemonBlueDark;
+            }
+		}
+	}
+}
+
+footer.community {
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+}
+footer {
+    padding-top: 2em; padding-bottom: 2em;
+
+    > div {
+
+        > p {
+            clear: both;
+            width: 100%;
+            color: #999;
+            margin-top: 2em;
+        }
+    }
+
+	ul {
+        margin: 0 0 2em 0; padding: 0;
+        overflow: auto;
+
+		> li {
+			list-style-type: none;
+            float: left;
+            width: 25%;
+            margin: 0; padding: 0;
+
+            &.learn-more {
+                width: 25%;
+            }
+            &.features {
+                width: 30%;
+            }
+            &.support {
+                width: 20%;
+            }
+
+            h2 {
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #444;
+                font-family: "Museo Rounded", sans-serif;
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+
+            a {
+                display: block;
+                clear: both;
+                font-weight: 100;
+                color: #444 !important;
+                line-height: 175%;
+
+                &.site-title {
+                    margin-bottom: .35em;
+                }
+
+                &.btn {
+                    margin-top: 1em;
+                }
+            }
+		}
+	}
+
+
+    &.community {
+        padding-top: 4em; padding-bottom: 4em;
+
+        ul {
+            > li {
+                width: 33%;
+
+                &.description {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+	p {
+		font-weight: 300;
+		font-size: .9em;
+	}
+}
+
+
+.btn {
+
+}
+
+.btn-outline {
+    border: 1px solid #555;
+    padding-left: 2em; padding-right: 2em;
+}

@@ -4,22 +4,7 @@ layout: guidelines
 
 <div class="guidelines" ng-app="guidelines">
 
-  <h1 class="banner">LemonStand Design Guidelines</h1>
-
-  <header class="page-menu">
-  <nav class="btn-group" ng-controller="pageMenu">
-      <a class="btn btn-default" ng-click="scrollTo('dress')">Dress</a>
-      <a class="btn btn-default" ng-click="scrollTo('colours')">Colours</a>
-      <a class="btn btn-default" ng-click="scrollTo('icography')">Icons</a>
-      <a class="btn btn-default" ng-click="scrollTo('type')">Type</a>
-      <!--
-      <a class="btn btn-default" ng-click="scrollTo('ui')">UI</a>
-      <a class="btn btn-default" ng-click="scrollTo('widgets')">Widgets</a>
-      <a class="btn btn-default" ng-click="scrollTo('metaphors')">Metaphors</a>
-      -->
-  </nav>
-  </header>
-
+  <nav class="crumbs"><a id="projects"></a> <a href="/">Community projects</a> | Brand Design Guidelines</nav>
 
   <div ng-include="'dress-template.html'"></div>
   <div ng-include="'colours-template.html'" ng-controller="colorsCtrl" >
